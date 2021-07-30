@@ -9,5 +9,6 @@ set ruler
 set paste
 highlight Comment cterm=italic gui=italic
 highlight Comment ctermfg=blue
-execute pathogen#infect()
 filetype plugin indent on
+:set wrap
+:set linebreak
