@@ -34,7 +34,7 @@ start-at-login = true
 #   after-startup-command = ['exec-and-forget open -a Safari', 'exec-and-forget open -a Slack']
 after-startup-command = [
 'workspace 1',
-'layout dwindle',
+'layout tiles',
 # standard grey /white-ish color
 # 'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 
@@ -71,7 +71,7 @@ after-startup-command = [
 # 'dwindle' - HyprSpace exclusive binary tree layout with automatic orientation
 # 'master' - HyprSpace exclusive master/stack layout
 # 'scroll'/'niri'/'paper' - HyprSpace exclusive scrollable layout
-default-root-container-layout = 'dwindle'
+default-root-container-layout = 'tiles'
 
 # Default container orientation for tiles layout
 # Options: 'horizontal', 'vertical', 'auto'
@@ -88,7 +88,6 @@ default-root-container-orientation = 'horizontal'
 #   1.0 = Equal split (50%/50%)
 #   1.618 = Golden ratio split (~62%/38%)
 #   0.618 = Inverse golden ratio (~38%/62%)
-dwindle-default-split-ratio = 0.618
 
 # Enforce aspect ratio for single windows in dwindle layout
 # Format: [width, height] or [0, 0] to disable
@@ -98,13 +97,11 @@ dwindle-default-split-ratio = 0.618
 #   [21, 9] = 21:9 ultrawide
 #   [1, 1] = Square
 #   [0, 0] = Disabled (default)
-dwindle-single-window-aspect-ratio = [0, 0]
 
 # Tolerance for aspect ratio adjustments
 # Range: 0.0 to 1.0
 # Prevents tiny padding adjustments when window is close to target ratio
 # Lower values = more strict, higher values = more lenient
-dwindle-single-window-aspect-ratio-tolerance = 0.1
 
 # ╔═══════════════════════════════════════════════════════════════════════════════╗
 # ║                      MOUSE INTERACTION (HYPRSPACE EXCLUSIVE)                  ║
@@ -117,7 +114,6 @@ dwindle-single-window-aspect-ratio-tolerance = 0.1
 #   0.5 = Precise (slower, fine-grained control)
 #   1.0 = Balanced (default)
 #   2.0 = Aggressive (faster, coarse adjustments)
-mouse-sensitivity = 0.2
 
 # ╔═══════════════════════════════════════════════════════════════════════════════╗
 # ║                     MASTER LAYOUT (HYPRSPACE EXCLUSIVE)                       ║
@@ -129,7 +125,6 @@ mouse-sensitivity = 0.2
 #   0.5 = Equal split (50%)
 #   0.618 = Golden ratio (~62%)
 #   0.66 = Two-thirds (~66%)
-master-default-percent = 0.66
 
 # ╔═══════════════════════════════════════════════════════════════════════════════╗
 # ║                SCROLL/NIRI/PAPER LAYOUT (HYPRSPACE EXCLUSIVE)                 ║
@@ -145,7 +140,6 @@ master-default-percent = 0.66
 #   0.8  = 80% width (10% peek each side) - default
 #   0.9  = 90% width (5% peek each side) - focused
 #   1.0  = 100% width (no peek) - full screen
-niri-focused-width-ratio = 0.8
 
 # ╔═══════════════════════════════════════════════════════════════════════════════╗
 # ║                           OTHER LAYOUT SETTINGS                               ║
@@ -436,11 +430,8 @@ alt-ctrl-right = 'move right'
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Layout switching (HyprSpace exclusive layouts included)
-alt-shift-d = 'layout dwindle'          # HyprSpace exclusive
 alt-shift-t = 'layout tiles'            # Traditional tiling
 alt-shift-a = 'layout accordion'        # Accordion (one window visible)
-alt-shift-m = 'layout master'           # HyprSpace exclusive master/stack
-alt-shift-s = 'layout scroll'           # HyprSpace exclusive scrollable
 
 # Toggle between floating and tiling for current window
 alt-shift-space = 'layout floating tiling'
